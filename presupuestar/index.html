@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presupuestar · Presupuestos profesionales en minutos, desde el celular</title>
+<meta name="description" content="Cargás los materiales y tu mano de obra, la app hace las cuentas y el presupuesto sale listo para mandar por WhatsApp o en PDF.">
+<meta name="theme-color" content="#0b2545">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Presupuestar · Presupuestos profesionales en minutos, desde el celular">
+<meta property="og:description" content="Cargás los materiales y tu mano de obra, la app hace las cuentas y el presupuesto sale listo para mandar por WhatsApp o en PDF. Probala gratis 15 días.">
+<meta property="og:url" content="https://presupuestar.frcreaciones2.workers.dev/conoce/">
+<meta property="og:image" content="https://presupuestar.frcreaciones2.workers.dev/conoce/compartir.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--c1:#0b2545;--c2:#1e6bff;--c3:#1f9d55;--suave:#eef3fe;--linea:#d8e3f7;--tinta:#13213b;--gris:#56647a;--fondo:#f7f9fc;--blanco:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--tinta);background:var(--fondo);line-height:1.55;font-size:17px;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ancho{max-width:1120px;margin:0 auto;padding:0 18px}
+.cab{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--linea)}
+.cab .ancho{display:flex;align-items:center;gap:10px;min-height:60px}
+.cab img{width:34px;height:34px;border-radius:9px}
+.cab b{font-size:1.08rem;color:var(--c1);flex:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-height:52px;padding:0 22px;border-radius:14px;font-weight:800;font-size:1.02rem;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .12s,box-shadow .12s;text-align:center}
+.btn:active{transform:translateY(1px)}
+.btn--ok{background:var(--c3);color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.14)}
+.btn--borde{background:var(--blanco);color:var(--c1);border-color:var(--c1)}
+.btn--chico{min-height:40px;padding:0 14px;font-size:.92rem;border-radius:11px}
+.hero{background:linear-gradient(160deg,var(--c1) 0%,var(--c2) 100%);color:#fff;overflow:hidden}
+.hero .ancho{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;padding-top:44px;padding-bottom:0}
+.hero__txt{padding-bottom:44px}
+.hero__logo{max-width:300px;max-height:150px;width:auto;height:auto;margin:0 0 18px;background:#ffffff;border-radius:14px;padding:10px 16px}
+.hero__marca{display:flex;align-items:center;gap:12px;margin-bottom:18px;font-size:1.6rem;font-weight:800}
+.hero__marca img{width:64px;height:64px;border-radius:16px;background:#fff}
+.hero h1{font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.12;margin:0 0 14px;letter-spacing:-.02em}
+.hero p{font-size:1.12rem;margin:0 0 24px;color:rgba(255,255,255,.9);max-width:34em}
+.hero__btns{display:flex;flex-wrap:wrap;gap:12px}
+.hero .btn--borde{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.7)}
+.hero__nota{margin-top:14px;font-size:.93rem;color:rgba(255,255,255,.82)}
+.hero__tel{align-self:end;display:flex;justify-content:center}
+.tel{width:min(300px,78vw);border-radius:36px;padding:10px;background:#0b1220;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.tel img{border-radius:28px;width:100%;height:auto}
+.hero__tel .tel{border-bottom-left-radius:0;border-bottom-right-radius:0;padding-bottom:0;margin-bottom:-2px}
+.hero__tel .tel img{border-bottom-left-radius:0;border-bottom-right-radius:0;max-height:520px;object-fit:cover;object-position:top}
+section{padding:56px 0}
+section.alt{background:var(--blanco)}
+h2{font-size:clamp(1.5rem,3.4vw,2.1rem);line-height:1.2;margin:0 0 10px;color:var(--c1);letter-spacing:-.01em}
+.lead{color:var(--gris);font-size:1.08rem;margin:0 0 26px;max-width:46em}
+.problema{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:0;padding:0;list-style:none}
+.problema li{background:var(--blanco);border:1px solid var(--linea);border-left:5px solid #e0624f;border-radius:14px;padding:16px 18px}
+.pasos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;counter-reset:p}
+.pasos li{counter-increment:p;background:var(--suave);border:1px solid var(--linea);border-radius:16px;padding:52px 18px 18px;position:relative}
+.pasos li::before{content:counter(p);position:absolute;left:18px;top:14px;width:30px;height:30px;border-radius:50%;background:var(--c2);color:#fff;font-weight:800;display:grid;place-items:center}
+.pasos strong{color:var(--c1)}
+.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.g{margin:0;text-align:center}
+.g .tel{width:100%;max-width:260px;margin:0 auto}
+.g .hoja{background:#fff;border-radius:10px;box-shadow:0 14px 40px rgba(11,37,69,.18);overflow:hidden;border:1px solid var(--linea)}
+.g figcaption{margin-top:12px;font-weight:700;color:var(--c1)}
+.funcs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.f{background:var(--blanco);border:1px solid var(--linea);border-radius:16px;padding:18px}
+.f h3{margin:0 0 6px;font-size:1.05rem;color:var(--c1)}
+.f p{margin:0;color:var(--gris);font-size:.98rem}
+.ventajas{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.ventajas li{padding:14px 16px 14px 48px;position:relative;background:var(--suave);border-radius:14px}
+.ventajas li::before{content:"✓";position:absolute;left:16px;top:13px;width:22px;height:22px;border-radius:50%;background:var(--c3);color:#fff;font-weight:900;font-size:.85rem;display:grid;place-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.chips li{background:var(--blanco);border:1.5px solid var(--linea);border-radius:999px;padding:9px 16px;font-weight:600}
+details{background:var(--blanco);border:1px solid var(--linea);border-radius:14px;margin-bottom:10px}
+summary{cursor:pointer;padding:16px 18px;font-weight:700;color:var(--c1);list-style:none;position:relative;padding-right:46px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:18px;top:12px;font-size:1.5rem;color:var(--c2);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin:0;padding:0 18px 16px;color:var(--gris)}
+.final{background:linear-gradient(160deg,var(--c1),var(--c2));color:#fff;text-align:center}
+.final h2{color:#fff}
+.final p{color:rgba(255,255,255,.88);margin:0 auto 24px;max-width:36em}
+.final .hero__btns{justify-content:center}
+.final .btn--borde{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.7)}
+footer{padding:26px 0 34px;text-align:center;font-size:.86rem;color:var(--gris)}
+.flotante{position:fixed;right:16px;bottom:16px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+.flotante svg{width:30px;height:30px;fill:#fff}
+@media (max-width:860px){
+  .hero .ancho{grid-template-columns:1fr;padding-top:30px}
+  .hero__txt{padding-bottom:6px}
+  .galeria{grid-template-columns:1fr;max-width:340px;margin:0 auto}
+  .hero__btns .btn{flex:1 1 100%}
+  section{padding:44px 0}
+}
+</style>
+</head>
+<body>
+<header class="cab"><div class="ancho"><img src="icon-192.png" alt="" width="34" height="34"><b>Presupuestar</b><a class="btn btn--ok btn--chico" href="https://presupuestar.frcreaciones2.workers.dev/?p=YMY7U">Probala gratis</a></div></header>
+
+<div class="hero"><div class="ancho">
+  <div class="hero__txt">
+    <img class="hero__logo" src="logo-presupuestar.png" alt="Presupuestar">
+    <h1>Presupuestos profesionales en minutos, desde el celular</h1>
+    <p>Cargás los materiales y tu mano de obra, la app hace las cuentas y el presupuesto sale listo para mandar por WhatsApp o en PDF.</p>
+    <div class="hero__btns">
+      <a class="btn btn--ok" href="https://presupuestar.frcreaciones2.workers.dev/?p=YMY7U">📲 Probala gratis 15 días</a>
+      <a class="btn btn--borde" href="Presupuestar-Presentacion.pdf" download>📄 Bajar la presentación</a>
+    </div>
+    <div class="hero__nota">Funciona en Android, iPhone y computadora. Se instala como una app, sin pasar por la tienda.</div>
+  </div>
+  <div class="hero__tel"><div class="tel"><img src="captura-1.jpg" alt="Completás el presupuesto en el celular" width="585" height="1266"></div></div>
+</div></div>
+
+<section class="alt"><div class="ancho">
+  <h2>El problema</h2>
+  <p class="lead">Hacer un presupuesto suele llevar más tiempo del que debería, y muchas veces se pierde el trabajo por mandarlo tarde o desprolijo.</p>
+  <ul class="problema"><li>Se arma en un papel, en un cuaderno o en un mensaje largo, y las cuentas se hacen a mano o con la calculadora.</li><li>Se olvida sumar un material, la ganancia o la mano de obra, y se cobra de menos.</li><li>Al cliente le llega algo poco claro, y eso le resta confianza frente a otro que mandó un PDF prolijo.</li><li>Después nadie se acuerda cuánto se le cotizó a cada cliente ni dónde quedó ese presupuesto.</li></ul>
+</div></section>
+
+<section><div class="ancho">
+  <h2>Cómo funciona</h2>
+  <p class="lead">Presupuestar es una app para el celular que arma presupuestos profesionales en minutos y los manda por WhatsApp o en PDF. Está pensada para quien vive de hacer trabajos: técnicos, instaladores, gasistas, electricistas, plomeros, pintores, talleres y servicios en general.</p>
+  <ol class="pasos"><li><strong>Cargás los datos de tu negocio una sola vez:</strong> nombre, rubro, teléfono y correo. Desde ahí salen en todos tus presupuestos.</li><li><strong>Completás el presupuesto:</strong> cliente, trabajo a realizar, materiales con cantidad y precio, mano de obra y tu ganancia.</li><li><strong>La app hace todas las cuentas</strong> y te muestra el total al instante, mientras escribís.</li><li><strong>Lo mandás:</strong> por WhatsApp con un toque, o descargás un PDF profesional para enviarlo o imprimirlo.</li></ol>
+</div></section>
+
+<section class="alt"><div class="ancho">
+  <h2>Así se ve</h2>
+  <p class="lead">Capturas reales de la app.</p>
+  <div class="galeria"><figure class="g g--tel"><div class="tel"><img src="captura-1.jpg" alt="Completás el presupuesto en el celular" loading="lazy"></div><figcaption>Completás el presupuesto en el celular</figcaption></figure><figure class="g g--hoja"><div class="hoja"><img src="captura-2.jpg" alt="Sale un PDF profesional con tu nombre" loading="lazy"></div><figcaption>Sale un PDF profesional con tu nombre</figcaption></figure><figure class="g g--tel"><div class="tel"><img src="captura-3.jpg" alt="La app hace todas las cuentas" loading="lazy"></div><figcaption>La app hace todas las cuentas</figcaption></figure></div>
+</div></section>
+
+<section><div class="ancho">
+  <h2>Qué hace la app</h2>
+  <div class="funcs"><div class="f"><h3>Datos de tu negocio</h3><p>Tu nombre, rubro, teléfono y correo aparecen solos en cada presupuesto. Se cargan una vez.</p></div><div class="f"><h3>Materiales y mano de obra</h3><p>Agregás todos los materiales que necesites, con cantidad y precio, más el costo de tu trabajo.</p></div><div class="f"><h3>Ganancia automática</h3><p>Ponés el porcentaje que querés ganar y la app lo suma. Podés mostrarlo aparte o repartirlo en los precios para que el cliente vea solo el total.</p></div><div class="f"><h3>Cuentas al instante</h3><p>El total se actualiza mientras escribís. Sin calculadora y sin errores de suma.</p></div><div class="f"><h3>PDF profesional</h3><p>Un presupuesto prolijo, con tu nombre, número de presupuesto, fecha, detalle, total, condiciones y espacio para firma.</p></div><div class="f"><h3>Numeración propia</h3><p>Cada presupuesto lleva su número (por ejemplo PRE-2026-0001), como en una empresa grande.</p></div><div class="f"><h3>Envío por WhatsApp</h3><p>Con un toque se abre WhatsApp con el presupuesto escrito y ordenado, listo para mandar.</p></div><div class="f"><h3>Datos del equipo</h3><p>Para técnicos: tipo de equipo, marca y diagnóstico, que salen en el PDF. Son opcionales.</p></div><div class="f"><h3>Condiciones y garantía</h3><p>Tu texto de garantía y las condiciones que quieras (forma de pago, plazos, anticipo).</p></div><div class="f"><h3>Validez del presupuesto</h3><p>Elegís cuántos días vale la oferta y la app calcula hasta qué fecha.</p></div><div class="f"><h3>Historial que se guarda solo</h3><p>Cada presupuesto queda guardado automáticamente, sin tocar ningún botón.</p></div><div class="f"><h3>Buscador</h3><p>Encontrás cualquier presupuesto viejo por nombre del cliente, trabajo, dirección o teléfono, y lo abrís para editarlo o reenviarlo.</p></div><div class="f"><h3>Copia de seguridad</h3><p>Descargás un respaldo de tus presupuestos y lo recuperás cuando quieras.</p></div><div class="f"><h3>Funciona sin señal</h3><p>Una vez instalada, se usa aunque no haya internet en el lugar del trabajo.</p></div><div class="f"><h3>Tus datos son tuyos</h3><p>Los presupuestos quedan en tu teléfono. No se suben a ningún lado.</p></div></div>
+</div></section>
+
+<section class="alt"><div class="ancho">
+  <h2>Por qué conviene</h2>
+  <ul class="ventajas"><li><strong>Gana más trabajos.</strong> El que responde primero y con un presupuesto claro suele quedarse con el cliente.</li><li><strong>No pierde plata.</strong> La ganancia y la mano de obra siempre están incluidas, y las cuentas no tienen errores.</li><li><strong>Ahorra tiempo.</strong> Lo que antes llevaba media hora se hace en pocos minutos, desde el lugar del trabajo.</li><li><strong>Da una imagen profesional.</strong> Un PDF prolijo, con número y condiciones, transmite seriedad.</li><li><strong>Tiene todo ordenado.</strong> Sabe qué le cotizó a cada cliente y lo encuentra en segundos.</li><li><strong>Sin complicaciones.</strong> Se usa desde el celular, sin computadora, sin instalar programas y sin capacitación.</li></ul>
+</div></section>
+
+<section><div class="ancho">
+  <h2>Para quién es</h2>
+  <p class="lead">Sirve para cualquier oficio o servicio que cotiza materiales más mano de obra:</p>
+  <ul class="chips"><li>Climatización y refrigeración: instalación y service de aires</li><li>Electricistas, gasistas y plomeros</li><li>Pintores, albañiles, durlock y reformas</li><li>Herrería, carpintería y aberturas</li><li>Cámaras de seguridad, alarmas y redes</li><li>Jardinería, piletas y mantenimiento</li></ul>
+</div></section>
+
+<section class="alt"><div class="ancho">
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>¿Funciona en Android y en iPhone?</summary><p>Sí. Se instala desde el navegador del teléfono, sin pasar por la tienda de aplicaciones.</p></details><details><summary>¿Necesito internet?</summary><p>Solo para entrar la primera vez. Después funciona sin señal.</p></details><details><summary>¿Puedo poner mi logo y mis colores?</summary><p>Sí. La versión para tu negocio se entrega con tu logo en la app y en el PDF.</p></details><details><summary>¿Qué pasa con mis presupuestos cuando termina la prueba?</summary><p>Quedan guardados en tu teléfono. Podés descargarlos y recuperarlos en tu versión definitiva.</p></details><details><summary>¿Y si cambio de teléfono?</summary><p>Descargás la copia de seguridad desde la app y la restaurás en el teléfono nuevo.</p></details><details><summary>¿Alguien más ve mis presupuestos?</summary><p>No. Quedan solo en tu teléfono.</p></details>
+</div></section>
+
+<section class="final"><div class="ancho">
+  <h2>Probala gratis 15 días</h2>
+  <p>Abrila desde el celular, dejá tu nombre y tu WhatsApp, y empezá a usarla. Si te sirve, la seguís usando con todos tus datos.</p>
+  <div class="hero__btns">
+    <a class="btn btn--ok" href="https://presupuestar.frcreaciones2.workers.dev/?p=YMY7U">📲 Probala gratis</a>
+    <a class="btn btn--borde" href="Presupuestar-Presentacion.pdf" download>📄 Bajar la presentación</a>
+    <a class="btn btn--borde" href="https://wa.me/5492213506378?text=Hola,%20quiero%20saber%20más%20de%20Presupuestar." target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+  </div>
+</div></section>
+
+<footer><div class="ancho">Desarrollado por <strong>Gustavo Ariel Rey</strong> · © 2026 Gustavo Ariel Rey · Todos los derechos reservados</div></footer>
+<a class="flotante" href="https://wa.me/5492213506378?text=Hola,%20quiero%20saber%20más%20de%20Presupuestar." target="_blank" rel="noopener" aria-label="Consultar por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+</body>
+</html>

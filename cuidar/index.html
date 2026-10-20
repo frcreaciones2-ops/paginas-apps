@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuidar+ · Todo lo de cada paciente a mano, para no olvidar nada</title>
+<meta name="description" content="La app de la cuidadora: fichas, remedios con aviso, presión, glucemia, documentos y un botón de emergencia, en el mismo celular.">
+<meta name="theme-color" content="#0a3f7a">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cuidar+ · Todo lo de cada paciente a mano, para no olvidar nada">
+<meta property="og:description" content="La app de la cuidadora: fichas, remedios con aviso, presión, glucemia, documentos y un botón de emergencia, en el mismo celular. Probala gratis 15 días.">
+<meta property="og:url" content="https://cuidar.frcreaciones2.workers.dev/conoce/">
+<meta property="og:image" content="https://cuidar.frcreaciones2.workers.dev/conoce/compartir.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--c1:#0a3f7a;--c2:#0d5aa7;--c3:#0e9f6e;--suave:#eef5fd;--linea:#cfe0f5;--tinta:#13213b;--gris:#56647a;--fondo:#f7f9fc;--blanco:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--tinta);background:var(--fondo);line-height:1.55;font-size:17px;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ancho{max-width:1120px;margin:0 auto;padding:0 18px}
+.cab{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--linea)}
+.cab .ancho{display:flex;align-items:center;gap:10px;min-height:60px}
+.cab img{width:34px;height:34px;border-radius:9px}
+.cab b{font-size:1.08rem;color:var(--c1);flex:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-height:52px;padding:0 22px;border-radius:14px;font-weight:800;font-size:1.02rem;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .12s,box-shadow .12s;text-align:center}
+.btn:active{transform:translateY(1px)}
+.btn--ok{background:var(--c3);color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.14)}
+.btn--borde{background:var(--blanco);color:var(--c1);border-color:var(--c1)}
+.btn--chico{min-height:40px;padding:0 14px;font-size:.92rem;border-radius:11px}
+.hero{background:linear-gradient(160deg,var(--c1) 0%,var(--c2) 100%);color:#fff;overflow:hidden}
+.hero .ancho{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;padding-top:44px;padding-bottom:0}
+.hero__txt{padding-bottom:44px}
+.hero__logo{max-width:300px;max-height:150px;width:auto;height:auto;margin:0 0 18px;background:#ffffff;border-radius:14px;padding:10px 16px}
+.hero__marca{display:flex;align-items:center;gap:12px;margin-bottom:18px;font-size:1.6rem;font-weight:800}
+.hero__marca img{width:64px;height:64px;border-radius:16px;background:#fff}
+.hero h1{font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.12;margin:0 0 14px;letter-spacing:-.02em}
+.hero p{font-size:1.12rem;margin:0 0 24px;color:rgba(255,255,255,.9);max-width:34em}
+.hero__btns{display:flex;flex-wrap:wrap;gap:12px}
+.hero .btn--borde{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.7)}
+.hero__nota{margin-top:14px;font-size:.93rem;color:rgba(255,255,255,.82)}
+.hero__tel{align-self:end;display:flex;justify-content:center}
+.tel{width:min(300px,78vw);border-radius:36px;padding:10px;background:#0b1220;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.tel img{border-radius:28px;width:100%;height:auto}
+.hero__tel .tel{border-bottom-left-radius:0;border-bottom-right-radius:0;padding-bottom:0;margin-bottom:-2px}
+.hero__tel .tel img{border-bottom-left-radius:0;border-bottom-right-radius:0;max-height:520px;object-fit:cover;object-position:top}
+section{padding:56px 0}
+section.alt{background:var(--blanco)}
+h2{font-size:clamp(1.5rem,3.4vw,2.1rem);line-height:1.2;margin:0 0 10px;color:var(--c1);letter-spacing:-.01em}
+.lead{color:var(--gris);font-size:1.08rem;margin:0 0 26px;max-width:46em}
+.problema{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:0;padding:0;list-style:none}
+.problema li{background:var(--blanco);border:1px solid var(--linea);border-left:5px solid #e0624f;border-radius:14px;padding:16px 18px}
+.pasos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;counter-reset:p}
+.pasos li{counter-increment:p;background:var(--suave);border:1px solid var(--linea);border-radius:16px;padding:52px 18px 18px;position:relative}
+.pasos li::before{content:counter(p);position:absolute;left:18px;top:14px;width:30px;height:30px;border-radius:50%;background:var(--c2);color:#fff;font-weight:800;display:grid;place-items:center}
+.pasos strong{color:var(--c1)}
+.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.g{margin:0;text-align:center}
+.g .tel{width:100%;max-width:260px;margin:0 auto}
+.g .hoja{background:#fff;border-radius:10px;box-shadow:0 14px 40px rgba(11,37,69,.18);overflow:hidden;border:1px solid var(--linea)}
+.g figcaption{margin-top:12px;font-weight:700;color:var(--c1)}
+.funcs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.f{background:var(--blanco);border:1px solid var(--linea);border-radius:16px;padding:18px}
+.f h3{margin:0 0 6px;font-size:1.05rem;color:var(--c1)}
+.f p{margin:0;color:var(--gris);font-size:.98rem}
+.ventajas{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.ventajas li{padding:14px 16px 14px 48px;position:relative;background:var(--suave);border-radius:14px}
+.ventajas li::before{content:"✓";position:absolute;left:16px;top:13px;width:22px;height:22px;border-radius:50%;background:var(--c3);color:#fff;font-weight:900;font-size:.85rem;display:grid;place-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.chips li{background:var(--blanco);border:1.5px solid var(--linea);border-radius:999px;padding:9px 16px;font-weight:600}
+details{background:var(--blanco);border:1px solid var(--linea);border-radius:14px;margin-bottom:10px}
+summary{cursor:pointer;padding:16px 18px;font-weight:700;color:var(--c1);list-style:none;position:relative;padding-right:46px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:18px;top:12px;font-size:1.5rem;color:var(--c2);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin:0;padding:0 18px 16px;color:var(--gris)}
+.final{background:linear-gradient(160deg,var(--c1),var(--c2));color:#fff;text-align:center}
+.final h2{color:#fff}
+.final p{color:rgba(255,255,255,.88);margin:0 auto 24px;max-width:36em}
+.final .hero__btns{justify-content:center}
+.final .btn--borde{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.7)}
+footer{padding:26px 0 34px;text-align:center;font-size:.86rem;color:var(--gris)}
+.flotante{position:fixed;right:16px;bottom:16px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+.flotante svg{width:30px;height:30px;fill:#fff}
+@media (max-width:860px){
+  .hero .ancho{grid-template-columns:1fr;padding-top:30px}
+  .hero__txt{padding-bottom:6px}
+  .galeria{grid-template-columns:1fr;max-width:340px;margin:0 auto}
+  .hero__btns .btn{flex:1 1 100%}
+  section{padding:44px 0}
+}
+</style>
+</head>
+<body>
+<header class="cab"><div class="ancho"><img src="icon-192.png" alt="" width="34" height="34"><b>Cuidar+</b><a class="btn btn--ok btn--chico" href="https://cuidar.frcreaciones2.workers.dev/?p=WVANS">Probala gratis</a></div></header>
+
+<div class="hero"><div class="ancho">
+  <div class="hero__txt">
+    <img class="hero__logo" src="logo-cuidar.png" alt="Cuidar+">
+    <h1>Todo lo de cada paciente a mano, para no olvidar nada</h1>
+    <p>La app de la cuidadora: fichas, remedios con aviso, presión, glucemia, documentos y un botón de emergencia, en el mismo celular.</p>
+    <div class="hero__btns">
+      <a class="btn btn--ok" href="https://cuidar.frcreaciones2.workers.dev/?p=WVANS">📲 Probala gratis 15 días</a>
+      <a class="btn btn--borde" href="Cuidar-Presentacion.pdf" download>📄 Bajar la presentación</a>
+    </div>
+    <div class="hero__nota">Funciona en Android, iPhone y computadora. Se instala como una app, sin pasar por la tienda.</div>
+  </div>
+  <div class="hero__tel"><div class="tel"><img src="captura-1.jpg" alt="Lo de hoy, por hora" width="585" height="1266"></div></div>
+</div></div>
+
+<section class="alt"><div class="ancho">
+  <h2>El problema</h2>
+  <p class="lead">Quien cuida a varias personas mayores maneja muchísima información, y casi siempre está repartida.</p>
+  <ul class="problema"><li>Los remedios y horarios de cada paciente están en papeles, en la heladera o en la memoria.</li><li>En una emergencia hay que encontrar rápido el DNI, la obra social, el número de afiliado y a quién llamar.</li><li>Las recetas vencen, los turnos médicos se pasan y los estudios se olvidan.</li><li>Los controles de presión y glucemia quedan anotados en un cuaderno que el médico no ve.</li></ul>
+</div></section>
+
+<section><div class="ancho">
+  <h2>Cómo funciona</h2>
+  <p class="lead">Cuidar+ es una app para el celular de la cuidadora: tiene todo lo de cada paciente a mano, avisa los remedios y ayuda a no olvidar nada. Fichas, obra social, teléfonos, documentos, remedios, presión, glucemia y turnos, ordenados por paciente.</p>
+  <ol class="pasos"><li><strong>Cargás a cada paciente:</strong> datos, obra social, médico, familiares y fotos del DNI y del carnet.</li><li><strong>Cargás sus remedios con los horarios,</strong> y la app los pone en el calendario del teléfono para que suene el aviso.</li><li><strong>Cada día, la pantalla "Hoy" muestra qué hay que dar y a qué hora.</strong> Tocás "Dado" y queda anotado.</li><li><strong>En una emergencia, un botón</strong> muestra lo importante en grande, llama con un toque y arma la ficha del paciente en PDF.</li></ol>
+</div></section>
+
+<section class="alt"><div class="ancho">
+  <h2>Así se ve</h2>
+  <p class="lead">Capturas reales de la app.</p>
+  <div class="galeria"><figure class="g g--tel"><div class="tel"><img src="captura-1.jpg" alt="Lo de hoy, por hora" loading="lazy"></div><figcaption>Lo de hoy, por hora</figcaption></figure><figure class="g g--tel"><div class="tel"><img src="captura-2.jpg" alt="La ficha de cada paciente" loading="lazy"></div><figcaption>La ficha de cada paciente</figcaption></figure><figure class="g g--tel"><div class="tel"><img src="captura-3.jpg" alt="Emergencia: lo importante en grande" loading="lazy"></div><figcaption>Emergencia: lo importante en grande</figcaption></figure></div>
+</div></section>
+
+<section><div class="ancho">
+  <h2>Qué hace la app</h2>
+  <div class="funcs"><div class="f"><h3>Pantalla "Hoy"</h3><p>Los remedios del día por hora, los recordatorios y las recetas que están por vencer, todo junto.</p></div><div class="f"><h3>Ficha de cada paciente</h3><p>Datos personales, obra social y número de afiliado, información de salud, médico y notas.</p></div><div class="f"><h3>Teléfonos útiles</h3><p>Familiares, médico, obra social y emergencias, para llamar o escribir por WhatsApp con un toque.</p></div><div class="f"><h3>Documentos</h3><p>Fotos o PDF del DNI, el carnet de la obra social, recetas y estudios. Si tienen vencimiento, la app avisa.</p></div><div class="f"><h3>Remedios con aviso</h3><p>Cada remedio con sus horarios, desde cuándo y hasta cuándo, y una foto de la caja. El aviso suena en el calendario del teléfono.</p></div><div class="f"><h3>"Dado"</h3><p>Al dar un remedio se marca, y queda claro qué falta.</p></div><div class="f"><h3>Botón de emergencia</h3><p>Lo esencial del paciente en grande, botones para llamar a emergencias, la obra social, un familiar o el médico, y la ficha en PDF para mostrar o mandar.</p></div><div class="f"><h3>Presión y glucemia</h3><p>Anotás cada control. La app marca si está fuera del rango que indicó el médico, muestra un gráfico y lo manda al médico por WhatsApp.</p></div><div class="f"><h3>Recordatorios</h3><p>Turnos médicos, estudios, compras y trámites, con repetición y aviso en el calendario.</p></div><div class="f"><h3>Varios pacientes</h3><p>Cada paciente con lo suyo, todo separado y ordenado.</p></div><div class="f"><h3>PIN</h3><p>La app se abre con un PIN de 4 números, porque guarda datos de salud.</p></div><div class="f"><h3>Copia de seguridad</h3><p>Se guarda sola en la nube una vez por día, con fotos y documentos, cifrada con la clave de la cuidadora.</p></div><div class="f"><h3>Funciona sin señal</h3><p>Una vez instalada, se usa aunque no haya internet. La ficha de emergencia se arma sin conexión.</p></div><div class="f"><h3>Letra grande</h3><p>Se puede agrandar la letra para leer mejor.</p></div></div>
+</div></section>
+
+<section class="alt"><div class="ancho">
+  <h2>Por qué conviene</h2>
+  <ul class="ventajas"><li><strong>No se olvida nada.</strong> Los remedios, las recetas por vencer y los turnos avisan solos.</li><li><strong>Responde rápido en una emergencia.</strong> Todo lo importante está en un solo botón.</li><li><strong>Trabaja más tranquila.</strong> No depende de papeles ni de la memoria.</li><li><strong>Da una imagen profesional.</strong> La familia y el médico ven que todo está ordenado y controlado.</li><li><strong>Cuida los datos.</strong> La información de salud queda protegida con PIN y respaldada.</li><li><strong>Sin complicaciones.</strong> Se usa desde el celular, sin computadora y sin capacitación.</li></ul>
+</div></section>
+
+<section><div class="ancho">
+  <h2>Para quién es</h2>
+  
+  <ul class="chips"><li>Cuidadoras y cuidadores de personas mayores, en casas particulares</li><li>Acompañantes terapéuticos y personal de cuidado domiciliario</li><li>Enfermeras y enfermeros que atienden a domicilio</li><li>Familiares que cuidan a uno o más parientes</li></ul>
+</div></section>
+
+<section class="alt"><div class="ancho">
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>¿Funciona en Android y en iPhone?</summary><p>Sí. Se instala desde el navegador del teléfono, sin pasar por la tienda de aplicaciones.</p></details><details><summary>¿Necesito internet?</summary><p>Solo para entrar la primera vez y para la copia de seguridad. Después funciona sin señal.</p></details><details><summary>¿Cómo suenan los avisos de los remedios?</summary><p>La app los agrega al calendario del teléfono con un toque, y el calendario hace sonar la alarma a la hora indicada.</p></details><details><summary>¿Alguien más ve los datos de los pacientes?</summary><p>No. Quedan en el teléfono, protegidos con PIN, y la copia en la nube está cifrada: nadie más la puede leer.</p></details><details><summary>¿Y si cambio de teléfono o se me rompe?</summary><p>Con el código y la clave de la copia de seguridad recuperás todo en el teléfono nuevo, con fotos y documentos.</p></details><details><summary>¿Reemplaza las indicaciones del médico?</summary><p>No. Ayuda a ordenarlas y a cumplirlas, pero las decisiones de salud las toma siempre el médico.</p></details><details><summary>¿Puedo poner mi nombre, mi logo y mis colores?</summary><p>Sí. La versión para tu servicio de cuidado lleva tu nombre, tu logo y tus colores.</p></details>
+</div></section>
+
+<section class="final"><div class="ancho">
+  <h2>Probala gratis 15 días</h2>
+  <p>Abrila desde el celular, dejá tu nombre y tu WhatsApp, y empezá a usarla. Si te sirve, la seguís usando con todos tus datos.</p>
+  <div class="hero__btns">
+    <a class="btn btn--ok" href="https://cuidar.frcreaciones2.workers.dev/?p=WVANS">📲 Probala gratis</a>
+    <a class="btn btn--borde" href="Cuidar-Presentacion.pdf" download>📄 Bajar la presentación</a>
+    <a class="btn btn--borde" href="https://wa.me/5492213506378?text=Hola,%20quiero%20saber%20más%20de%20Cuidar+." target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+  </div>
+</div></section>
+
+<footer><div class="ancho">Desarrollado por <strong>Gustavo Ariel Rey</strong> · © 2026 Gustavo Ariel Rey · Todos los derechos reservados</div></footer>
+<a class="flotante" href="https://wa.me/5492213506378?text=Hola,%20quiero%20saber%20más%20de%20Cuidar+." target="_blank" rel="noopener" aria-label="Consultar por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+</body>
+</html>
