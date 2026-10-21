@@ -116,3 +116,13 @@ footer nav a:hover{color:var(--crema)}
 .flotante svg{width:30px;height:30px;fill:#fff}
 :focus-visible{outline:2px solid var(--cobre-claro);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Clientes */
+.clientes{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.cli{background:linear-gradient(180deg,var(--negro-2),#17181c);border:1px solid var(--linea);border-radius:20px;padding:18px 18px 24px;transition:border-color .2s,transform .2s}
+.cli:hover{border-color:rgba(207,127,63,.45);transform:translateY(-2px)}
+.cli-logo{height:170px;border-radius:14px;display:grid;place-items:center;padding:18px;margin-bottom:18px;border:1px solid var(--linea)}
+.cli-logo img{max-height:134px;max-width:100%;object-fit:contain}
+.cli span{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cobre)}
+.cli h3{margin:4px 0 8px;font-size:1.25rem}
+.cli p{color:var(--crema-2);margin:0;font-size:.98rem}
