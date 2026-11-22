@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaora · Comé rico, movete y viví en calma</title>
+<meta name="description" content="Kaora te arma las comidas según tu presupuesto, te propone rutinas de fuerza y de calma, y te acompaña todo el día con un coach con inteligencia artificial.">
+<meta name="theme-color" content="#1f8a70">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kaora · Comé rico, movete y viví en calma">
+<meta property="og:description" content="Comidas según tu presupuesto, rutinas de fuerza y de calma, y un coach que te acompaña todo el día. Probala gratis.">
+<meta property="og:url" content="https://kaora.pages.dev/">
+<meta property="og:image" content="https://kaora.pages.dev/compartir.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--c1:#14594a;--c2:#1f8a70;--c3:#f4b942;--suave:#e7f4ef;--linea:#e2ded3;--tinta:#1d2622;--gris:#56635e;--fondo:#f6f4ee;--blanco:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Outfit","Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--tinta);background:var(--fondo);line-height:1.55;font-size:17px;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ancho{max-width:1120px;margin:0 auto;padding:0 18px}
+.cab{position:sticky;top:0;z-index:20;background:rgba(246,244,238,.94);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--linea)}
+.cab .ancho{display:flex;align-items:center;gap:10px;min-height:60px}
+.cab .marca{flex:1;display:flex;align-items:center;gap:2px;text-decoration:none;font-weight:700;font-size:1.5rem;color:var(--c1);letter-spacing:-.03em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-height:52px;padding:0 22px;border-radius:14px;font-weight:700;font-size:1.02rem;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .12s,box-shadow .12s;text-align:center;font-family:inherit}
+.btn:active{transform:translateY(1px)}
+.btn--ok{background:var(--c3);color:var(--tinta);box-shadow:0 6px 18px rgba(0,0,0,.14)}
+.btn--verde{background:var(--c2);color:#fff}
+.btn--borde{background:var(--blanco);color:var(--c1);border-color:var(--c1)}
+.btn--chico{min-height:40px;padding:0 14px;font-size:.92rem;border-radius:11px}
+.hero{background:var(--c2);color:#fff;overflow:hidden}
+.hero .ancho{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;padding-top:48px;padding-bottom:0}
+.hero__txt{padding-bottom:48px}
+.hero__marca{display:flex;align-items:center;gap:2px;margin-bottom:20px;font-size:3.4rem;font-weight:700;letter-spacing:-.04em;line-height:1}
+.hero h1{font-size:clamp(2rem,4.8vw,3.1rem);line-height:1.1;margin:0 0 14px;letter-spacing:-.02em;font-weight:700}
+.hero p{font-size:1.15rem;margin:0 0 24px;color:rgba(255,255,255,.92);max-width:34em}
+.hero__btns{display:flex;flex-wrap:wrap;gap:12px}
+.hero .btn--borde{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.7)}
+.hero__nota{margin-top:14px;font-size:.95rem;color:rgba(255,255,255,.85)}
+.hero__tel{align-self:end;display:flex;justify-content:center}
+.tel{width:min(300px,78vw);border-radius:36px;padding:10px;background:#0b1512;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.tel img{border-radius:28px;width:100%;height:auto}
+.hero__tel .tel{border-bottom-left-radius:0;border-bottom-right-radius:0;padding-bottom:0;margin-bottom:-2px}
+.hero__tel .tel img{border-bottom-left-radius:0;border-bottom-right-radius:0;max-height:520px;object-fit:cover;object-position:top}
+section{padding:60px 0}
+section.alt{background:var(--blanco)}
+h2{font-size:clamp(1.6rem,3.6vw,2.3rem);line-height:1.15;margin:0 0 10px;color:var(--c1);letter-spacing:-.02em}
+.eyebrow{display:inline-block;font-size:.85rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--c2);margin-bottom:8px}
+.lead{color:var(--gris);font-size:1.1rem;margin:0 0 26px;max-width:46em}
+.historia{background:var(--c1);color:#fff}
+.historia h2{color:#fff}
+.historia .eyebrow{color:var(--c3)}
+.historia .lead{color:rgba(255,255,255,.88)}
+.historia__intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-bottom:34px}
+.historia__intro p{margin:0 0 14px;color:rgba(255,255,255,.9);font-size:1.08rem}
+.palabra{display:inline-block;font-weight:700;color:var(--c3)}
+.whare{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.pared{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:20px}
+.pared small{display:block;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c3);font-weight:600}
+.pared h3{margin:4px 0 8px;font-size:1.3rem}
+.pared p{margin:0 0 12px;color:rgba(255,255,255,.85);font-size:.97rem}
+.pared .en{margin:0;padding-top:12px;border-top:1px solid rgba(255,255,255,.18);font-size:.95rem;color:#fff}
+.whenua{margin-top:14px;background:rgba(244,185,66,.14);border:1px solid rgba(244,185,66,.45);border-radius:18px;padding:18px 20px;display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
+.whenua b{color:var(--c3);font-size:1.1rem}
+.whenua span{color:rgba(255,255,255,.9)}
+.respeto{margin:26px 0 0;font-size:.92rem;color:rgba(255,255,255,.72);max-width:52em}
+.problema{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:0;padding:0;list-style:none}
+.problema li{background:var(--fondo);border:1px solid var(--linea);border-radius:14px;padding:16px 18px}
+.pasos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;counter-reset:p}
+.pasos li{counter-increment:p;background:var(--suave);border:1px solid #cfe7de;border-radius:16px;padding:52px 18px 18px;position:relative}
+.pasos li::before{content:counter(p);position:absolute;left:18px;top:14px;width:30px;height:30px;border-radius:50%;background:var(--c2);color:#fff;font-weight:700;display:grid;place-items:center}
+.pasos strong{color:var(--c1)}
+.galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:start}
+.g{margin:0;text-align:center}
+.g .tel{width:100%;max-width:240px;margin:0 auto}
+.g figcaption{margin-top:12px;font-weight:600;color:var(--c1)}
+.funcs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.f{background:var(--blanco);border:1px solid var(--linea);border-radius:16px;padding:18px}
+.f h3{margin:0 0 6px;font-size:1.08rem;color:var(--c1)}
+.f p{margin:0;color:var(--gris);font-size:.98rem}
+.ventajas{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.ventajas li{padding:14px 16px 14px 48px;position:relative;background:var(--suave);border-radius:14px}
+.ventajas li::before{content:"✓";position:absolute;left:16px;top:13px;width:22px;height:22px;border-radius:50%;background:var(--c2);color:#fff;font-weight:900;font-size:.85rem;display:grid;place-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.chips li{background:var(--blanco);border:1.5px solid var(--linea);border-radius:999px;padding:9px 16px;font-weight:500}
+details{background:var(--blanco);border:1px solid var(--linea);border-radius:14px;margin-bottom:10px}
+summary{cursor:pointer;padding:16px 18px;font-weight:600;color:var(--c1);list-style:none;position:relative;padding-right:46px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:18px;top:12px;font-size:1.5rem;color:var(--c2);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin:0;padding:0 18px 16px;color:var(--gris)}
+.final{background:var(--c2);color:#fff;text-align:center}
+.final h2{color:#fff}
+.final p{color:rgba(255,255,255,.9);margin:0 auto 24px;max-width:36em}
+.final .hero__btns{justify-content:center}
+.final .btn--borde{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.7)}
+footer{padding:26px 0 34px;text-align:center;font-size:.88rem;color:var(--gris)}
+.flotante{position:fixed;right:16px;bottom:16px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+.flotante svg{width:30px;height:30px;fill:#fff}
+@media (max-width:960px){.whare{grid-template-columns:repeat(2,minmax(0,1fr))}.galeria{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:860px){
+  .hero .ancho{grid-template-columns:1fr;padding-top:30px}
+  .hero__txt{padding-bottom:6px}
+  .hero__btns .btn{flex:1 1 100%}
+  .historia__intro{grid-template-columns:1fr;gap:6px}
+  section{padding:46px 0}
+}
+@media (max-width:560px){.whare{grid-template-columns:1fr}.galeria{grid-template-columns:1fr;max-width:300px;margin:0 auto}}
+</style>
+</head>
+<body>
+<header class="cab"><div class="ancho">
+  <a class="marca" href="#"><svg width="38" height="38" viewBox="0 0 100 100" aria-hidden="true"><path d="M24 72 L76 72" stroke="#1f8a70" stroke-width="7" stroke-linecap="round"/><path d="M50 72 L50 48" stroke="#1f8a70" stroke-width="7" stroke-linecap="round"/><path d="M50 50 C40 50 29 43 26 30 C39 30 50 37 50 50 Z" fill="#1f8a70"/><path d="M50 50 C60 50 71 43 74 30 C61 30 50 37 50 50 Z" fill="#f4b942"/></svg>kaora</a>
+  <a class="btn btn--verde btn--chico" href="https://equilibra-8p8.pages.dev/">Probala gratis</a>
+</div></header>
+
+<div class="hero"><div class="ancho">
+  <div class="hero__txt">
+    <div class="hero__marca"><svg width="78" height="78" viewBox="0 0 100 100" aria-hidden="true"><path d="M24 72 L76 72" stroke="#fff" stroke-width="7" stroke-linecap="round"/><path d="M50 72 L50 48" stroke="#fff" stroke-width="7" stroke-linecap="round"/><path d="M50 50 C40 50 29 43 26 30 C39 30 50 37 50 50 Z" fill="#fff"/><path d="M50 50 C60 50 71 43 74 30 C61 30 50 37 50 50 Z" fill="#f4b942"/></svg>kaora</div>
+    <h1>Comé rico, movete y viví en calma</h1>
+    <p>Kaora te arma las comidas según tu presupuesto, te propone rutinas de fuerza y de calma para hacer en casa, y te acompaña todo el día con un coach que te conoce.</p>
+    <div class="hero__btns">
+      <a class="btn btn--ok" href="https://equilibra-8p8.pages.dev/">Probala gratis</a>
+      <a class="btn btn--borde" href="#historia">Conocé la historia</a>
+    </div>
+    <div class="hero__nota">Funciona en Android, iPhone y computadora. Se instala como una app, sin pasar por la tienda.</div>
+  </div>
+  <div class="hero__tel"><div class="tel"><img src="captura-1.jpg" alt="La pantalla Hoy de Kaora: calorías, avisos del día y la rutina" width="585" height="1266"></div></div>
+</div></div>
+
+<section class="historia" id="historia"><div class="ancho">
+  <span class="eyebrow">La historia detrás del nombre</span>
+  <h2>Una casa con cuatro paredes</h2>
+  <div class="historia__intro">
+    <div>
+      <p>En la lengua del pueblo maorí, de Nueva Zelanda, la palabra <span class="palabra">ora</span> quiere decir vida, salud, estar bien. Por eso, cuando se saludan, dicen <span class="palabra">kia ora</span>: que tengas vida, que estés bien.</p>
+      <p>Kaora nace de ese sonido. Suena a <span class="palabra">ka ora</span>, algo así como "vas a estar bien". Esa es la idea de la app: no prometerte un cuerpo de revista, sino acompañarte a estar mejor, un día a la vez.</p>
+    </div>
+    <div>
+      <p>A principios de los años 80, el médico maorí Mason Durie propuso una forma de pensar la salud que hoy se usa en todo su país: <span class="palabra">Te Whare Tapa Whā</span>, la casa de cuatro paredes.</p>
+      <p>La salud es como el <em>wharenui</em>, la casa de reunión de la comunidad. Para estar firme necesita sus cuatro paredes, y si una se debilita toda la casa se resiente. Las cuatro se apoyan sobre la tierra. Con esa imagen pensamos Kaora.</p>
+    </div>
+  </div>
+  <div class="whare">
+    <div class="pared"><small>Tinana</small><h3>El cuerpo</h3><p>Cómo crece, cómo se mueve, cómo lo alimentamos y lo cuidamos.</p><p class="en">En Kaora: comidas a tu medida y rutinas de fuerza con el peso del cuerpo.</p></div>
+    <div class="pared"><small>Hinengaro</small><h3>La mente</h3><p>Lo que pensamos y sentimos, y cómo atravesamos los días difíciles.</p><p class="en">En Kaora: rutinas de calma con tai chi y qigong, y un momento para contar cómo te sentiste.</p></div>
+    <div class="pared"><small>Whānau</small><h3>Los tuyos</h3><p>La familia, los amigos, la comunidad: no nos cuidamos solos.</p><p class="en">En Kaora: recetas caseras para toda la mesa y logros para compartir con los tuyos.</p></div>
+    <div class="pared"><small>Wairua</small><h3>El sentido</h3><p>Lo que nos importa, lo que nos da ganas de levantarnos cada día.</p><p class="en">En Kaora: tu propio porqué, el descanso y un acompañamiento sin culpa ni castigo.</p></div>
+  </div>
+  <div class="whenua"><b>Whenua · la tierra</b><span>La base de la casa. En Kaora, comida real: lo que hay en la verdulería, la carnicería y el almacén de tu barrio, según lo que podés gastar.</span></div>
+  <p class="respeto">Kaora no es una palabra ni una app maorí: es nuestro homenaje a una manera de entender la salud que nos inspiró. Te Whare Tapa Whā es un modelo creado por Sir Mason Durie y forma parte del sistema de salud de Nueva Zelanda.</p>
+</div></section>
+
+<section class="alt"><div class="ancho">
+  <span class="eyebrow">El problema</span>
+  <h2>Cuidarse no debería ser tan difícil</h2>
+  <p class="lead">Casi todos queremos comer mejor y movernos más. Lo que falla casi nunca son las ganas.</p>
+  <ul class="problema"><li>Las dietas piden cosas imposibles y se abandonan a las dos semanas.</li><li>Las recetas usan ingredientes que no hay en el barrio o que no entran en el presupuesto.</li><li>Las apps más conocidas se pagan en dólares y no piensan en la comida argentina.</li><li>El gimnasio queda lejos, es caro o da vergüenza empezar.</li><li>Nadie te acompaña: el día que aflojás, no hay quien te ayude a retomar.</li></ul>
+</div></section>
+
+<section><div class="ancho">
+  <span class="eyebrow">Cómo funciona</span>
+  <h2>En cuatro pasos</h2>
+  <p class="lead">Respondés unas preguntas y Kaora arma todo a tu medida: tus comidas, tu movimiento y tu acompañamiento.</p>
+  <ol class="pasos"><li><strong>Contás quién sos y qué querés:</strong> bajar, mantener o subir de peso, cuánto te movés y qué no comés.</li><li><strong>Elegís tu presupuesto y tus comidas favoritas,</strong> y Kaora arma el plan de la semana con recetas caseras y la lista de compras.</li><li><strong>Cada día, la pantalla "Hoy"</strong> te muestra qué comer, cuánta agua llevás y qué rutina te toca.</li><li><strong>El coach te acompaña:</strong> te avisa si te olvidaste de una comida, te anima a moverte y te recuerda descansar.</li></ol>
+</div></section>
+
+<section class="alt"><div class="ancho">
+  <span class="eyebrow">Así se ve</span>
+  <h2>Capturas reales de la app</h2>
+  <p class="lead">Así es Kaora por dentro: simple, clara y en castellano de acá.</p>
+  <div class="galeria"><figure class="g"><div class="tel"><img src="captura-1.jpg" alt="Pantalla Hoy" loading="lazy"></div><figcaption>Tu día de un vistazo</figcaption></figure><figure class="g"><div class="tel"><img src="captura-2.jpg" alt="Plan semanal de comidas" loading="lazy"></div><figcaption>El plan de la semana</figcaption></figure><figure class="g"><div class="tel"><img src="captura-3.jpg" alt="Rutinas de fuerza y calma" loading="lazy"></div><figcaption>Fuerza y Calma</figcaption></figure><figure class="g"><div class="tel"><img src="captura-4.jpg" alt="Coach con inteligencia artificial" loading="lazy"></div><figcaption>Tu coach</figcaption></figure></div>
+</div></section>
+
+<section><div class="ancho">
+  <span class="eyebrow">Qué hace la app</span>
+  <h2>Todo lo que necesitás, en el celular</h2>
+  <div class="funcs"><div class="f"><h3>Plan de comidas a tu medida</h3><p>Calorías y proteínas calculadas para vos, con recetas caseras argentinas que elegís vos.</p></div><div class="f"><h3>Según tu presupuesto</h3><p>Le decís cuánto podés gastar y el plan se arma con lo que entra en tu bolsillo.</p></div><div class="f"><h3>Lista de compras</h3><p>Se arma sola por rubro: verdulería, carnicería, almacén. La mandás por WhatsApp con un toque.</p></div><div class="f"><h3>Recetas nuevas con IA</h3><p>Si te aburrís, el coach te propone recetas nuevas que respetan tus gustos y restricciones.</p></div><div class="f"><h3>Foto del plato</h3><p>Sacale una foto a lo que comiste y Kaora estima las calorías por vos.</p></div><div class="f"><h3>Fuerza</h3><p>Rutinas de calistenia con el peso del cuerpo, en casa, con animación de cada ejercicio. Tres niveles para ir subiendo.</p></div><div class="f"><h3>Calma</h3><p>Tai chi y qigong para bajar el estrés, soltar la espalda y dormir mejor.</p></div><div class="f"><h3>Coach que te conoce</h3><p>Le preguntás lo que quieras: qué cenar, cómo vas, qué hacer si te tentaste. Elegís el tono: gentil, directo o bardero.</p></div><div class="f"><h3>Avisos todo el día</h3><p>Aunque la app esté cerrada: la comida sin cargar, el agua, el movimiento y la hora de descansar.</p></div><div class="f"><h3>Agua y ánimo</h3><p>Contás los vasos de agua con un toque y anotás cómo te sentiste cada día.</p></div><div class="f"><h3>Progreso y rachas</h3><p>Tu peso, tus días seguidos y tus rutinas, para ver cuánto avanzaste.</p></div><div class="f"><h3>Compartí tus logros</h3><p>Una imagen lista para tus redes cuando completás una rutina o cumplís una racha.</p></div></div>
+</div></section>
+
+<section class="alt"><div class="ancho">
+  <span class="eyebrow">Por qué Kaora</span>
+  <h2>Pensada para acá</h2>
+  <ul class="ventajas"><li><strong>Comida real y argentina.</strong> Milanesas al horno, guisos, tartas, mate: nada de ingredientes raros.</li><li><strong>Para cualquier bolsillo.</strong> El plan se adapta a lo que podés gastar.</li><li><strong>Sin gimnasio.</strong> Fuerza y calma en casa, en 10 a 20 minutos.</li><li><strong>Te acompaña de verdad.</strong> Avisos durante el día y un coach que conoce tu plan.</li><li><strong>Sin culpa.</strong> Si aflojás, te ayuda a retomar con algo suave.</li><li><strong>Cuidado con los más jóvenes.</strong> Desde los 15 años, con un plan ajustado para menores de 18.</li></ul>
+</div></section>
+
+<section><div class="ancho">
+  <span class="eyebrow">Para quién es</span>
+  <h2>Para quien quiere estar mejor</h2>
+  <ul class="chips"><li>Quien quiere bajar de peso sin hacer dieta</li><li>Quien quiere ordenar sus comidas y comer más casero</li><li>Quien quiere empezar a moverse en casa</li><li>Quien vive con estrés y quiere bajar un cambio</li><li>Familias que cocinan para todos con un presupuesto ajustado</li><li>Adolescentes desde los 15 años, con permiso de un adulto</li></ul>
+</div></section>
+
+<section class="alt"><div class="ancho">
+  <span class="eyebrow">Preguntas frecuentes</span>
+  <h2>Lo que más nos preguntan</h2>
+  <details><summary>¿Funciona en Android y en iPhone?</summary><p>Sí. Se instala desde el navegador del teléfono, sin pasar por la tienda de aplicaciones. En iPhone, para recibir avisos, hay que agregarla a la pantalla de inicio.</p></details><details><summary>¿Cuánto cuesta?</summary><p>Ahora la estamos probando y se usa gratis. Más adelante va a tener una versión gratuita y una completa a un precio en pesos accesible.</p></details><details><summary>¿Reemplaza a un nutricionista o a un médico?</summary><p>No. Kaora da orientación general para comer mejor y moverte más. Si tenés una enfermedad, estás embarazada o tomás medicación, consultá con un profesional de la salud.</p></details><details><summary>¿Tengo que hacerme una cuenta?</summary><p>No es obligatorio. Con una cuenta, entrando con tu mail, tus datos se guardan y los recuperás si cambiás de teléfono.</p></details><details><summary>¿Necesito ir al gimnasio o tener elementos?</summary><p>No. Las rutinas de fuerza son con el peso del cuerpo y las de calma no necesitan nada. Alcanza con un poco de espacio en casa.</p></details><details><summary>¿Qué significa Kaora?</summary><p>Está inspirado en la lengua maorí: suena a "ka ora", algo así como "vas a estar bien". La historia completa está más arriba.</p></details>
+</div></section>
+
+<section class="final"><div class="ancho">
+  <h2>Empezá hoy, a tu ritmo</h2>
+  <p>Abrila desde el celular, contestá unas preguntas y en dos minutos tenés tu plan. Vas a estar bien.</p>
+  <div class="hero__btns">
+    <a class="btn btn--ok" href="https://equilibra-8p8.pages.dev/">Probala gratis</a>
+    <a class="btn btn--borde" href="https://wa.me/5492213506378?text=Hola,%20quiero%20saber%20más%20de%20Kaora." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+  </div>
+</div></section>
+
+<footer><div class="ancho">Desarrollado por <a href="https://brising.pages.dev" style="color:inherit"><strong>Brising Desarrollos Tecnológicos</strong></a> · © Kaora 2026 Gustavo Rey · Todos los derechos reservados</div></footer>
+<a class="flotante" href="https://wa.me/5492213506378?text=Hola,%20quiero%20saber%20más%20de%20Kaora." target="_blank" rel="noopener" aria-label="Consultar por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+</body>
+</html>
