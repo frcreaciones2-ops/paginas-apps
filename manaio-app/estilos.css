@@ -103,3 +103,26 @@ textarea:focus{outline-color:var(--c2)}
 @media (prefers-reduced-motion:reduce){.circ{transition:none!important}.soltando{animation:none;opacity:0}}
 [tabindex="-1"]:focus{outline:none}
 .fila .btn{padding:0 14px;white-space:nowrap}
+
+/* Charla */
+.charla{gap:12px}
+.mini-logo svg{width:34px;height:34px;display:block}
+.chat{display:flex;flex-direction:column;gap:10px;padding-top:4px}
+.burbuja{max-width:86%;padding:12px 16px;border-radius:20px;font-size:16px;line-height:1.5;white-space:pre-wrap;animation:aparece .25s ease}
+.burbuja--bot{align-self:flex-start;background:var(--blanco);border-bottom-left-radius:6px}
+.burbuja--yo{align-self:flex-end;background:var(--c2);color:#fff;border-bottom-right-radius:6px}
+.escribiendo{display:flex;gap:5px;padding:16px 18px}
+.escribiendo span{width:8px;height:8px;border-radius:50%;background:#9bb0b5;animation:punto 1s infinite ease-in-out}
+.escribiendo span:nth-child(2){animation-delay:.15s}.escribiendo span:nth-child(3){animation-delay:.3s}
+@keyframes punto{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+@keyframes aparece{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.chat-ops{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.chip{min-height:44px;padding:0 16px;border-radius:22px;border:1.5px solid var(--c2);background:var(--blanco);color:var(--c1);font-weight:700;font-size:15px}
+.chip:active{background:#e3eef0}
+.chat-form{display:flex;gap:8px;align-items:flex-end;position:sticky;bottom:calc(84px + var(--inf));background:var(--fondo);padding-top:6px}
+.chat-form textarea{min-height:52px;max-height:160px;padding:14px 16px;border-radius:26px;flex:1}
+.enviar{width:52px;height:52px;border-radius:26px;border:0;background:var(--c2);color:#fff;display:grid;place-items:center;flex:none}
+.chat-ayuda{display:flex;flex-direction:column;gap:8px;max-width:92%}
+.chat-ayuda .linea{padding:12px 14px}
+.chat-ayuda .linea b{font-size:18px}
+@media (prefers-reduced-motion:reduce){.burbuja{animation:none}.escribiendo span{animation:none}}

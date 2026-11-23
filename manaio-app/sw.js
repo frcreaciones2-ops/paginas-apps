@@ -1,7 +1,7 @@
 /* Manaio · funciona sin internet una vez instalada. Subir VERSION en cada cambio. */
-const VERSION = "manaio-0.1.0";
+const VERSION = "manaio-0.3.0";
 const ARCHIVOS = [
-  "./", "index.html", "estilos.css", "app.js", "contenido.js", "manifest.webmanifest",
+  "./", "index.html", "estilos.css", "app.js", "contenido.js", "relatos.js", "manifest.webmanifest",
   "icon-192.png", "icon-512.png", "favicon.png",
   "fuentes/quicksand-latin-600-normal.woff2", "fuentes/quicksand-latin-700-normal.woff2",
   "fuentes/dm-sans-latin-400-normal.woff2", "fuentes/dm-sans-latin-500-normal.woff2", "fuentes/dm-sans-latin-700-normal.woff2"
