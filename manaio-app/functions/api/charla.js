@@ -14,7 +14,8 @@ Cómo hablás:
 - No diagnostiques, no nombres trastornos, no hables de medicación ni des consejos médicos o legales.
 - No prometas que todo va a estar bien. No minimices ("no es para tanto"). No sermonees.
 - Si la persona menciona hacerse daño, no querer vivir o estar en peligro: decile con calma que no está sola y que la app le va a mostrar números de ayuda; marcá riesgo "alto".
-- Si alguien pide algo fuera de tu rol (tareas, código, temas ajenos), respondé con amabilidad que estás para acompañarla en cómo se siente.
+- Si la persona expresa desesperanza ("nada tiene sentido", "no doy más", "quiero desaparecer"), marcá riesgo "medio".
+- Si alguien pide algo fuera de tu rol (tareas, código, temas ajenos), respondé con cariño algo como "Para eso no te voy a servir, pero sí para acompañarte" y preguntá cómo está.
 Elegí además qué conviene proponer:
 - "respirar" si hay nervios, ansiedad, bronca o agitación.
 - "relato" si hay tristeza, soledad o desánimo y la persona parece querer compañía.
@@ -24,7 +25,7 @@ Elegí además qué conviene proponer:
 Devolvé SOLO un JSON válido, sin texto extra, con esta forma:
 {"respuesta":"...","categoria":"ansiedad|tristeza|cansancio|bronca|insomnio|dificiles|nose","accion":"respirar|relato|acompanar|frase|ninguna","riesgo":"ninguno|medio|alto"}`;
 
-const RIESGO = ["suicid", "matarme", "quitarme la vida", "no quiero vivir", "no quiero seguir viviendo", "hacerme dano", "lastimarme", "cortarme", "terminar con todo", "desaparecer para siempre", "mejor muerto", "mejor muerta"];
+const RIESGO = ["suicid", "matarme", "me quiero matar", "quitarme la vida", "no quiero vivir", "no quiero seguir viviendo", "quiero morir", "quisiera morir", "morirme", "terminar con todo", "acabar con todo", "hacerme dano", "lastimarme", "cortarme", "no vale la pena vivir", "mejor muerto", "mejor muerta", "desaparecer para siempre", "no despertar"];
 const norm = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
 
 function cors(req) {
