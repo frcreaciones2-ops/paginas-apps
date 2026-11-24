@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pollería Gestión · Ventas, caja, stock y personal de tu pollería</title>
+<meta name="description" content="Vendé por kilo o por unidad, controlá la caja de cada turno, el stock y las cuentas corrientes, y sabé quién está trabajando. Todo compartido entre el mostrador y tu celular.">
+<meta name="theme-color" content="#0d47a1">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pollería Gestión · Ventas, caja, stock y personal de tu pollería">
+<meta property="og:description" content="Vendé por kilo o por unidad, controlá la caja de cada turno, el stock y las cuentas corrientes, y sabé quién está trabajando. Todo compartido entre el mostrador y tu celular. Probala gratis 15 días.">
+<meta property="og:url" content="https://polleriagestion.pages.dev/">
+<meta property="og:image" content="https://polleriagestion.pages.dev/compartir.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--c1:#0d47a1;--c2:#1e88e5;--c3:#0288d1;--suave:#e1f4fd;--linea:#cfe6f7;--tinta:#10263b;--gris:#4f667c;--fondo:#f2f8fd;--blanco:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--tinta);background:var(--fondo);line-height:1.55;font-size:17px;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ancho{max-width:1120px;margin:0 auto;padding:0 18px}
+.cab{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--linea)}
+.cab .ancho{display:flex;align-items:center;gap:10px;min-height:60px}
+.cab img{width:34px;height:34px;border-radius:9px}
+.cab b{font-size:1.08rem;color:var(--c1);flex:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-height:52px;padding:0 22px;border-radius:14px;font-weight:800;font-size:1.02rem;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .12s,box-shadow .12s;text-align:center}
+.btn:active{transform:translateY(1px)}
+.btn--ok{background:var(--c3);color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.14)}
+.btn--borde{background:var(--blanco);color:var(--c1);border-color:var(--c1)}
+.btn--chico{min-height:40px;padding:0 14px;font-size:.92rem;border-radius:11px}
+.hero{background:linear-gradient(160deg,var(--c1) 0%,var(--c2) 100%);color:#fff;overflow:hidden}
+.hero .ancho{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;padding-top:44px;padding-bottom:0}
+.hero__txt{padding-bottom:44px}
+.hero__logo{max-width:300px;max-height:150px;width:auto;height:auto;margin:0 0 18px;background:transparent;border-radius:14px;padding:0}
+.hero__marca{display:flex;align-items:center;gap:12px;margin-bottom:18px;font-size:1.6rem;font-weight:800}
+.hero__marca img{width:64px;height:64px;border-radius:16px;background:#fff}
+.hero h1{font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.12;margin:0 0 14px;letter-spacing:-.02em}
+.hero p{font-size:1.12rem;margin:0 0 24px;color:rgba(255,255,255,.9);max-width:34em}
+.hero__btns{display:flex;flex-wrap:wrap;gap:12px}
+.hero .btn--borde{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.7)}
+.hero__nota{margin-top:14px;font-size:.93rem;color:rgba(255,255,255,.82)}
+.hero__tel{align-self:end;display:flex;justify-content:center}
+.tel{width:min(300px,78vw);border-radius:36px;padding:10px;background:#0b1220;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.tel img{border-radius:28px;width:100%;height:auto}
+.hero__tel .tel{border-bottom-left-radius:0;border-bottom-right-radius:0;padding-bottom:0;margin-bottom:-2px}
+.hero__tel .tel img{border-bottom-left-radius:0;border-bottom-right-radius:0;max-height:520px;object-fit:cover;object-position:top}
+section{padding:56px 0}
+section.alt{background:var(--blanco)}
+h2{font-size:clamp(1.5rem,3.4vw,2.1rem);line-height:1.2;margin:0 0 10px;color:var(--c1);letter-spacing:-.01em}
+.lead{color:var(--gris);font-size:1.08rem;margin:0 0 26px;max-width:46em}
+.problema{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:0;padding:0;list-style:none}
+.problema li{background:var(--blanco);border:1px solid var(--linea);border-left:5px solid #e0624f;border-radius:14px;padding:16px 18px}
+.pasos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;counter-reset:p}
+.pasos li{counter-increment:p;background:var(--suave);border:1px solid var(--linea);border-radius:16px;padding:52px 18px 18px;position:relative}
+.pasos li::before{content:counter(p);position:absolute;left:18px;top:14px;width:30px;height:30px;border-radius:50%;background:var(--c2);color:#fff;font-weight:800;display:grid;place-items:center}
+.pasos strong{color:var(--c1)}
+.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.g{margin:0;text-align:center}
+.g .tel{width:100%;max-width:260px;margin:0 auto}
+.g .hoja{background:#fff;border-radius:10px;box-shadow:0 14px 40px rgba(11,37,69,.18);overflow:hidden;border:1px solid var(--linea)}
+.g figcaption{margin-top:12px;font-weight:700;color:var(--c1)}
+.funcs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.f{background:var(--blanco);border:1px solid var(--linea);border-radius:16px;padding:18px}
+.f h3{margin:0 0 6px;font-size:1.05rem;color:var(--c1)}
+.f p{margin:0;color:var(--gris);font-size:.98rem}
+.ventajas{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.ventajas li{padding:14px 16px 14px 48px;position:relative;background:var(--suave);border-radius:14px}
+.ventajas li::before{content:"✓";position:absolute;left:16px;top:13px;width:22px;height:22px;border-radius:50%;background:var(--c3);color:#fff;font-weight:900;font-size:.85rem;display:grid;place-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.chips li{background:var(--blanco);border:1.5px solid var(--linea);border-radius:999px;padding:9px 16px;font-weight:600}
+details{background:var(--blanco);border:1px solid var(--linea);border-radius:14px;margin-bottom:10px}
+summary{cursor:pointer;padding:16px 18px;font-weight:700;color:var(--c1);list-style:none;position:relative;padding-right:46px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:18px;top:12px;font-size:1.5rem;color:var(--c2);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin:0;padding:0 18px 16px;color:var(--gris)}
+.final{background:linear-gradient(160deg,var(--c1),var(--c2));color:#fff;text-align:center}
+.final h2{color:#fff}
+.final p{color:rgba(255,255,255,.88);margin:0 auto 24px;max-width:36em}
+.final .hero__btns{justify-content:center}
+.final .btn--borde{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.7)}
+footer{padding:26px 0 34px;text-align:center;font-size:.86rem;color:var(--gris)}
+.flotante{position:fixed;right:16px;bottom:16px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+.flotante svg{width:30px;height:30px;fill:#fff}
+@media (max-width:860px){
+  .hero .ancho{grid-template-columns:1fr;padding-top:30px}
+  .hero__txt{padding-bottom:6px}
+  .galeria{grid-template-columns:1fr;max-width:340px;margin:0 auto}
+  .hero__btns .btn{flex:1 1 100%}
+  section{padding:44px 0}
+}
+</style>
+</head>
+<body>
+<header class="cab"><div class="ancho"><img src="icon-192.png" alt="" width="34" height="34"><b>Pollería Gestión</b><a class="btn btn--ok btn--chico" href="https://polleria-gestion.pages.dev/?p=PS8S2">Probala gratis</a></div></header>
+
+<div class="hero"><div class="ancho">
+  <div class="hero__txt">
+    <div class="hero__marca"><img src="icon-512.png" alt="" width="64" height="64"><span>Pollería Gestión</span></div>
+    <h1>Tu pollería ordenada: ventas, caja y personal en todos tus equipos</h1>
+    <p>Vendé por kilo o por unidad, controlá la caja de cada turno, el stock y las cuentas corrientes, y sabé quién está trabajando. Todo compartido entre el mostrador y tu celular.</p>
+    <div class="hero__btns">
+      <a class="btn btn--ok" href="https://polleria-gestion.pages.dev/?p=PS8S2">📲 Probala gratis 15 días</a>
+      <a class="btn btn--borde" href="Polleria-Gestion-Presentacion.pdf" download>📄 Bajar la presentación</a>
+    </div>
+    <div class="hero__nota">Funciona en Android, iPhone y computadora. Se instala como una app, sin pasar por la tienda.</div>
+  </div>
+  <div class="hero__tel"><div class="tel"><img src="captura-1.jpg" alt="Vender por kilo o por unidad" width="780" height="1688"></div></div>
+</div></div>
+
+<section class="alt"><div class="ancho">
+  <h2>El problema</h2>
+  <p class="lead">En una pollería se vende rápido, por kilo y por unidad, con varias personas en el mostrador y muchos números en la cabeza.</p>
+  <ul class="problema"><li>La caja no cierra y no se sabe en qué turno ni quién la tenía.</li><li>Se vende por kilo con la calculadora y es fácil equivocarse con el precio.</li><li>El stock de pollo, trozados y elaborados se controla a ojo, y a la tarde falta lo que más sale.</li><li>Las cuentas corrientes de comedores y clientes quedan en un cuaderno.</li><li>No se sabe a qué hora llegó y se fue cada empleado.</li><li>A fin de mes no se sabe cuánto se ganó después de los gastos.</li></ul>
+</div></section>
+
+<section><div class="ancho">
+  <h2>Cómo funciona</h2>
+  <p class="lead">Pollería Gestión es una app para todo el negocio: el dueño ve todo desde su celular o computadora, el mostrador vende y maneja la caja, y cada empleado marca su llegada desde su teléfono. Los datos se comparten al instante entre todos los equipos.</p>
+  <ol class="pasos"><li><strong>Creás tu negocio</strong> con tu contraseña. Arranca con datos de ejemplo para que veas cómo funciona.</li><li><strong>Cargás tus productos</strong> por kilo o por unidad, con precio, costo y stock mínimo.</li><li><strong>Cada empleado marca Llegué</strong> desde su celular, con su link y su PIN.</li><li><strong>Uno abre la caja con su PIN</strong> y el mostrador empieza a vender. Si se va, la cierra o se la pasa a otro.</li><li><strong>Vos ves todo al momento:</strong> ventas, caja, stock, quién está y cuánto ganás.</li></ol>
+</div></section>
+
+<section class="alt"><div class="ancho">
+  <h2>Así se ve</h2>
+  <p class="lead">Capturas reales de la app (con datos de ejemplo).</p>
+  <div class="galeria"><figure class="g g--tel"><div class="tel"><img src="captura-1.jpg" alt="Vender" loading="lazy"></div><figcaption>Vendés por kilo o por unidad</figcaption></figure><figure class="g g--tel"><div class="tel"><img src="captura-2.jpg" alt="Caja" loading="lazy"></div><figcaption>La caja de cada turno, al día</figcaption></figure><figure class="g g--tel"><div class="tel"><img src="captura-3.jpg" alt="Presentismo" loading="lazy"></div><figcaption>Cada empleado marca desde su celular</figcaption></figure></div>
+</div></section>
+
+<section><div class="ancho">
+  <h2>Qué hace la app</h2>
+  <div class="funcs"><div class="f"><h3>Vender rápido</h3><p>Tocás el producto; si es por kilo ponés el peso o el importe. Descuentos, mostrador, delivery o pedido, y ticket para copiar.</p></div><div class="f"><h3>Formas de pago</h3><p>Efectivo, transferencia, Mercado Pago, débito, crédito y cuenta corriente. Si te equivocás, anulás la venta y vuelve el stock.</p></div><div class="f"><h3>Caja por turnos</h3><p>La abre un empleado con su PIN y queda a su cargo. Al irse la cierra con arqueo o se la pasa a otro, con el PIN de los dos.</p></div><div class="f"><h3>Stock al día</h3><p>Cada venta descuenta sola. Producción, mermas y recuentos; aviso cuando algo baja del mínimo.</p></div><div class="f"><h3>Cuentas corrientes</h3><p>Cada cliente con su saldo y límite; cobros y recordatorio por WhatsApp.</p></div><div class="f"><h3>Presentismo</h3><p>Cada empleado tiene su link y su PIN: marca Llegué y Me voy desde su celular, con la ubicación.</p></div><div class="f"><h3>Panel de personal</h3><p>Quién está ahora en el negocio, a qué hora llegó y cuántas horas lleva hoy y en el mes.</p></div><div class="f"><h3>Proveedores y compras</h3><p>Compras al contado o a cuenta, deuda con cada proveedor y pagos.</p></div><div class="f"><h3>Gastos</h3><p>Alquiler, servicios, sueldos, carbón, delivery: todo por categoría.</p></div><div class="f"><h3>Reportes</h3><p>Ventas, ticket promedio, margen, gastos y resultado; lo más vendido, horarios y medios de pago.</p></div><div class="f"><h3>Varios equipos a la vez</h3><p>El mostrador, tu celular y la computadora ven lo mismo al instante.</p></div><div class="f"><h3>Accesos separados</h3><p>Dueño con todo; el mostrador vende y cobra, sin ver ganancias ni gastos.</p></div></div>
+</div></section>
+
+<section class="alt"><div class="ancho">
+  <h2>Por qué conviene</h2>
+  <ul class="ventajas"><li><strong>La caja cierra.</strong> Cada turno tiene un responsable y su arqueo.</li><li><strong>No se pierden ventas.</strong> Sabés qué falta antes de quedarte sin mercadería.</li><li><strong>Sabés quién trabajó.</strong> Horas de cada empleado, sin planillas.</li><li><strong>Cobrás lo que te deben.</strong> Las cuentas corrientes al día.</li><li><strong>Sabés cuánto ganás.</strong> Margen y resultado reales, con los gastos.</li><li><strong>Lo ves desde donde estés.</strong> Todo en tu celular, al momento.</li></ul>
+</div></section>
+
+<section><div class="ancho">
+  <h2>Para quién es</h2>
+  <p class="lead">Para negocios de mostrador con uno o más puestos:</p>
+  <ul class="chips"><li>Pollerías y avícolas</li><li>Rotiserías y casas de comidas</li><li>Pollo al spiedo</li><li>Granjas y despensas con venta por kilo</li><li>Carnicerías con sección de pollo</li></ul>
+</div></section>
+
+<section class="alt"><div class="ancho">
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>¿Funciona en Android, iPhone y computadora?</summary><p>Sí. Se abre desde el navegador y se instala con su ícono, sin pasar por la tienda de aplicaciones.</p></details><details><summary>¿Puedo usarla en varios equipos a la vez?</summary><p>Sí. El mostrador, tu celular y la computadora comparten los mismos datos al instante.</p></details><details><summary>¿Los empleados necesitan una app aparte?</summary><p>No. Cada uno recibe por WhatsApp su link de presentismo, lo instala y elige su PIN.</p></details><details><summary>¿Necesito internet?</summary><p>Sí: los datos están en la nube para que todos los equipos vean lo mismo.</p></details><details><summary>¿El mostrador ve mis ganancias?</summary><p>No. El acceso del mostrador vende, cobra y maneja la caja; los reportes, gastos y ganancias los ves solo vos.</p></details><details><summary>¿Puedo poner el nombre, el logo y los colores de mi negocio?</summary><p>Sí. La versión para tu comercio lleva tu nombre, tu logo y tus colores.</p></details><details><summary>¿Qué pasa con mis datos cuando termina la prueba?</summary><p>Quedan guardados. Cuando tengas tu versión, seguís donde estabas.</p></details>
+</div></section>
+
+<section class="final"><div class="ancho">
+  <h2>Probala gratis 15 días</h2>
+  <p>Abrila desde el celular o la computadora, dejá tu nombre y tu WhatsApp, y empezá con los datos de ejemplo. Si te sirve, la seguís usando con todos tus datos.</p>
+  <div class="hero__btns">
+    <a class="btn btn--ok" href="https://polleria-gestion.pages.dev/?p=PS8S2">📲 Probala gratis</a>
+    <a class="btn btn--borde" href="Polleria-Gestion-Presentacion.pdf" download>📄 Bajar la presentación</a>
+    <a class="btn btn--borde" href="https://wa.me/5492213506378?text=Hola,%20quiero%20saber%20más%20de%20Pollería%20Gestión." target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+  </div>
+</div></section>
+
+<footer><div class="ancho">Desarrollado por <a href="https://brising.pages.dev" style="color:inherit"><strong>Brising Desarrollos Tecnológicos</strong></a> · © Pollería Gestión 2026 Gustavo Rey · Todos los derechos reservados</div></footer>
+<a class="flotante" href="https://wa.me/5492213506378?text=Hola,%20quiero%20saber%20más%20de%20Pollería%20Gestión." target="_blank" rel="noopener" aria-label="Consultar por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+</body>
+</html>
